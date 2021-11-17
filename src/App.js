@@ -26,11 +26,15 @@ function App() {
     return digits
   }
 
+  const calculate = () => {
+    setCalc(eval(calc).toString())
+  }
+
   return (
     <div className='App'>
       <div className='calculator'>
         <div className='display'>
-          {result ? <span>{result}</span> : ''} {calc || '0'}
+          {result ? <span>({result})</span> : ''} {calc || '0'}
         </div>
         <div className='operators'>
           <button onClick={() => updateCalc('/')}>/</button>
@@ -44,7 +48,7 @@ function App() {
           {createDigits()}
           <button onClick={() => updateCalc('0')}>0</button>
           <button onClick={() => updateCalc('.')}>.</button>
-          <button>=</button>
+          <button onClick={calculate}>=</button>
         </div>
       </div>
     </div>
