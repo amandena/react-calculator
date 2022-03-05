@@ -6,4 +6,5 @@ test('should render App component', () => {
   render(<App/>)
   const appElement = screen.getByTestId('app-1')
   expect(appElement).toBeInTheDocument()
+  expect(appElement).toHaveTextContent('DEL')
 })
