@@ -11,4 +11,5 @@ test('should render App component', () => {
   const appElement = screen.getByTestId('app-1')
   expect(appElement).toBeInTheDocument()
   expect(appElement).toHaveTextContent('DEL')
+  expect(appElement).toContainHTML('</button>')
 })
