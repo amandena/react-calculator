@@ -1,8 +1,8 @@
-import renderer from 'react-test-renderer'
-import '@testing-library/jest-dom/extend-expect'
-import App from '../App'
+import Enzyme from 'enzyme'
+import EnzymeAdapter from '@wojtekmaj/enzyme-adapter-react-17'
 
-test('matches snapshot', () => {
-  const tree = renderer.create(<App/>).toJSON()
-  expect(tree).toMatchSnapshot()
+Enzyme.configure({ adapter: new EnzymeAdapter() })
+
+test('first test', () => {
+
 })
